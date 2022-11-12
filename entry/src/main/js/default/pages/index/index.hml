@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title" onclick="toNextPage">
+        {{ $t('strings.hello') }} {{ title }}
+    </text>
+    <button class="btn" onclick="toNextPage">Next</button>
+    <button class="btn" onclick="toApod">To Apod</button>
+</div>

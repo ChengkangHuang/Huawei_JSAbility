@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title">
+        {{ title }}
+    </text>
+    <text class="data">{{ src }}</text>
+    <button class="btn" onclick="goBack">Go Back</button>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="out-container text-container">
+        <text class="date-title">Date Selector</text>
+        <picker class="date" type="date"
+                value="{{ dateValue }}"
+                selected="{{ dateSelect }}"
+                lunarswitch="true"
+                onchange="dateOnChange"
+                oncancel="cancel"></picker>
+    </div>
+    <text class="title">
+        {{ title }}
+    </text>
+    <text class="date">
+        {{ date }}
+    </text>
+    <text class="exp">
+        {{ explanation }}
+    </text>
+    <image class="img" src="{{ image }}"></image>
+    <button class="btn" onclick="getApodData">Get Data</button>
+    <button class="btn" onclick="goBack">Go Back</button>
+</div>
