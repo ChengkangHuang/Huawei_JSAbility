@@ -19,9 +19,9 @@ export default {
         let date = new Date();
         let year = date.getFullYear();
         let month = date.getMonth() + 1;
-        let day = date.getDay();
-        this.dateValue = year + "-" + month + "-" + day;
+        let day = date.getDate();
         this.dateSelect = year + "-" + month + "-" + day;
+        this.dateValue = this.dateSelect;
     },
     getApodData() {
         let httpRequest = http.createHttp();
@@ -41,7 +41,7 @@ export default {
         });
     },
     dateOnChange(e) {
-        this.dateValue = e.year + "-" + e.month + "-" + e.day;
+        this.dateValue = e.year + "-" + (e.month + 1) + "-" + e.day;
         prompt.showToast({
             message: 'Date: ' + this.dateValue,
             duration: 2000

@@ -2,6 +2,17 @@ apply plugin: 'com.huawei.ohos.hap'
 apply plugin: 'com.huawei.ohos.decctest'
 //For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
 ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\cheng\\.ohos\\config\\auto_debug_Huawei_JSAbility_com.ckhuang.jsability_260086000241045547.p12')
+            storePassword '0000001B9BDDBCDCB26842EF88266FEBBC718F4CF209D505580EF9C5AAD0FC283A8E0126F79CB66918F6CF'
+            keyAlias = 'debugKey'
+            keyPassword '0000001B4F5C0C6D51A1728A71374AAA249AF6D201946A0F42284997E96D4C1437A511EB39FF4283D0757F'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\cheng\\.ohos\\config\\auto_debug_Huawei_JSAbility_com.ckhuang.jsability_260086000241045547.p7b')
+            certpath file('C:\\Users\\cheng\\.ohos\\config\\auto_debug_Huawei_JSAbility_com.ckhuang.jsability_260086000241045547.cer')
+        }
+    }
     compileSdkVersion 6
     defaultConfig {
         compatibleSdkVersion 6
